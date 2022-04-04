@@ -67,6 +67,12 @@
     justify-content: center;
 }
 
+#pullup .hero::before {
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+}
+
 #pullup .hero h1,
 #pullup .hero p {
     font-size: 2em;
