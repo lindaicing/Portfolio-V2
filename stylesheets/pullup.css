@@ -115,9 +115,19 @@
     height: 8rem;
     margin-bottom: 0;
     object-fit: cover;
-    border: solid 0.5rem #222;
+    outline: solid 0.5rem #222;
+    outline-offset: -1px;
     border-radius: 100%;
     z-index: 1;
+}
+
+#pullup span.aboutSection {
+    display: block;
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px){
+    #pullup span.aboutSection { margin-top: 3rem; }
 }
 
 /* Footer -------------------------------------------------------------------*/
