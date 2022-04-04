@@ -116,7 +116,7 @@
     margin-bottom: 0;
     object-fit: cover;
     outline: solid 0.5rem #222;
-    outline-offset: -1px;
+    outline-offset: -2px;
     border-radius: 100%;
     z-index: 1;
 }
