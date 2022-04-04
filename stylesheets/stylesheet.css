@@ -195,6 +195,10 @@ body {
     flex-flow: column wrap;
   }
   .projectContainer { width: 100%; }
+  .footer {
+    border-top: none;
+    margin-top: 0;
+  }
 }
 
 
