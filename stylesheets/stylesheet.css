@@ -218,18 +218,11 @@ body {
 
 /* Boba ----------------------------------------------------------------------*/
 
-nav .boba {
-  transform: scale(0.25) rotate(12deg) !important;
-  margin-bottom: 0;
-}
-
 .boba {
+  display: block;
   position: relative;
   left: 50%;
   margin-bottom: 2rem;
-}
-
-.boba{
   width: 2px;
   background: rgba(243, 243, 243, 0.7);
   
@@ -385,4 +378,13 @@ nav .boba {
   -moz-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
   -o-transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000);
   transition-timing-function: cubic-bezier(0.635, 0.015, 0.385, 1.000); /* custom */
+}
+
+nav .boba {
+  transform: scale(0.25) rotate(12deg) !important;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1200px){
+  nav .boba { position: absolute; }
 }
