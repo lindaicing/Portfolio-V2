@@ -385,7 +385,6 @@ nav .boba {
 @media (max-width: 1200px){
   nav .boba { 
     position: absolute;
-    margin-top: 2rem;
-    margin: 0vw !important;
+    margin: 2rem 0 !important;
   }
 }
