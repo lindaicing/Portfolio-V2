@@ -60,6 +60,13 @@ nav .socials {
   text-align: right;
 }
 
+@media (max-width: 1200px){
+  nav .socials { 
+    position: absolute;
+    right: 2rem;
+  }
+}
+
 .triplebar {
   display: none;
   font-size: 2.5em;
