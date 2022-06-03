@@ -107,7 +107,7 @@ nav .socials i {
 }
 
 .projectContainer:hover img {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .projectDescription {
@@ -138,6 +138,11 @@ nav .socials i {
   font-weight: 700;
   letter-spacing: 1.1px;
   text-transform: uppercase;
+}
+
+.projectDescription p {
+  margin: 0 1rem;
+  text-align: center;
 }
 
 /* Footer -------------------------------------------------------------------*/
@@ -214,7 +219,7 @@ body {
 
 
 @media (max-width: 600px){
-  .projectContainer img { opacity: 0.5; }
+  .projectContainer img { opacity: 0.4; }
   .projectContainer .projectDescription { opacity: 1; }
   .projectContainer:hover img { opacity: 1; }  
   .projectContainer:hover .projectDescription { opacity: 0; }

@@ -179,10 +179,17 @@
     margin-bottom: 1.68em;
 }
 
-
 #pullup ul {
     list-style-type: disc;
     margin-left: 1.2rem;
+}
+
+.button {
+    display: inline-block;
+    margin: 0 1rem 2rem 0;
+    background: #111;
+    color: #fff;
+    padding: 1rem;
 }
 
 /* Pullup Image + Gallery ----------------------------------------------------*/
@@ -212,6 +219,26 @@
     font-size: 0.9em;
     font-style: italic;
     text-align: center;
+}
+
+#pullup .videoContainer {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    width:100%;
+    margin-bottom: 2rem;
+}
+
+#pullup .videoContainer iframe {
+    position: absolute;
+    top: 0; left: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#pullup iframe {
+    margin-bottom: 2rem;
 }
 
 /* Gallery Grid */
