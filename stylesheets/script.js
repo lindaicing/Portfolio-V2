@@ -66,7 +66,7 @@ $(document).ready(function(){
     $("#about").click(function() { 
         $("#pullupContent .fullDescription").load("pages/about.html"); 
         $("#pullupContent .hero").css({ 
-            "background": "url(images/about/banner-about.jpg)", 
+            "background": "url('./images/about/banner-about.jpg')", 
             "background-position":"50% 50%",
             "background-size":"cover",
             "background-repeat":"no-repeat" 
@@ -76,16 +76,16 @@ $(document).ready(function(){
         setPullup(); /* Project Content Setup */
     });
 
-    $("#photography").click(function() {
-        $("#pullupContent .fullDescription").load("pages/photography.html"); 
+    $("#art").click(function() {
+        $("#pullupContent .fullDescription").load("pages/art.html"); 
         $("#pullupContent .hero").css({ 
-            "background":"url('https://fungi.sorrelsprout.com/resources/heroes/hero.jpg')", 
+            "background":"url('./images/art/casual/puppetboy.jpg')", 
             "background-position":"50% 50%",
             "background-size":"cover",
             "background-repeat":"no-repeat" 
         });
-        $("#pullupContent .hero h1").html("Fungi Photography"); /* Project Name Setup */
-        $("#pullupContent .hero p").html("");
+        $("#pullupContent .hero h1").html("Art"); /* Project Name Setup */
+        $("#pullupContent .hero p").html("Collection of various acrylics, inks, and watercolors");
         setPullup(); /* Project Content Setup */
     });
 
