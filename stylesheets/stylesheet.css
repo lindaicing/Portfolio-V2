@@ -143,6 +143,7 @@ nav .socials i {
 .projectDescription p {
   margin: 0 1rem;
   text-align: center;
+  line-height: 1.5em;
 }
 
 /* Footer -------------------------------------------------------------------*/
