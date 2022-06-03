@@ -402,6 +402,7 @@ nav .boba {
 @media (max-width: 1200px){
   nav .boba { 
     position: absolute;
-    margin: 2rem 0 !important;
+    margin: 0 !important;
+    z-index: -1;
   }
 }
