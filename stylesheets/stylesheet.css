@@ -39,25 +39,29 @@ nav {
   z-index: 100;
 }
 
-nav a {
+nav a, nav ul li {
  text-transform: uppercase;
  margin: 0.5rem 0.5rem 0.5rem 0;
  letter-spacing: 1.1px;
+ cursor: pointer;
 }
 
-nav > span {
+nav > span, nav > ul {
   display: flex;
   width: 200px;
   justify-content: flex-start;
 }
 
 nav > span:last-child {
-  display: flex;
   justify-content: flex-end;
 }
 
 nav .socials {
   text-align: right;
+}
+
+nav .socials i {
+  margin-left: 0.5rem;
 }
 
 @media (max-width: 1200px){
@@ -150,7 +154,7 @@ nav .socials {
 
 /* General Typography -------------------------------------------------------*/
 
-a {
+a, nav ul li:hover {
   cursor: pointer;
   color: #fff;
   text-decoration: none;
@@ -171,7 +175,7 @@ a:hover {
 
 /* Transitions ---------------------------------------------------------------*/
 
-a, .projectContainer img, .projectContainer .projectDescription,
+a, nav ul li, .projectContainer img, .projectContainer .projectDescription,
 #pullup, #pullupToggle {
   transition: all 0.3s ease-out;
 }
@@ -224,7 +228,7 @@ body {
 
 .boba {
   display: block;
-  position: absolute;
+  position: relative;
   left: 50%;
   margin-bottom: 2rem;
   width: 2px;
@@ -385,6 +389,7 @@ body {
 }
 
 nav .boba {
+  position: absolute;
   transform: scale(0.25) rotate(12deg) !important;
   margin-bottom: 0;
 }
