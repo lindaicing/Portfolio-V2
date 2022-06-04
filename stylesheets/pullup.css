@@ -184,6 +184,8 @@
     margin-left: 1.2rem;
 }
 
+#pullup strong { font-weight: 600; }
+
 .button {
     display: inline-block;
     margin: 0 1rem 2rem 0;
