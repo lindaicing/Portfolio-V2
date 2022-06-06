@@ -186,13 +186,16 @@
 
 #pullup strong { font-weight: 600; }
 
-.button {
+#pullup .button, #pullup .buttonFigma {
     display: inline-block;
     margin: 0 1rem 2rem 0;
     background: #111;
     color: #fff;
     padding: 1rem;
 }
+
+#pullup .buttonFigma { display: none; }
+
 
 /* Pullup Image + Gallery ----------------------------------------------------*/
 
@@ -207,6 +210,10 @@
     width: 100%;
     margin-bottom: 2.5rem;
     padding: 2px;
+}
+
+#pullup img {
+
 }
 
 #pullup figure {
@@ -245,10 +252,22 @@
     margin-bottom: 2rem;
 }
 
-/* Gallery Grid */
-#pullup .gallery.col2 > img { max-width: 50%; object-fit: cover; }
-#pullup .gallery.col3 > img { max-width: 33.3%; object-fit: cover; }
+#pullup .figma {
+    width: 100%;
+}
 
+@media (max-width: 600px){
+    #pullup .figma {
+        display: none;
+    }
+    #pullup .buttonFigma { display: inline-block; }
+}
+
+/* Gallery Grid */
+#pullup .gallery.col2 > img, #pullup .gallery.col2 > figure { max-width: 50%; }    
+#pullup .gallery.col3 > img, #pullup .gallery.col3 > figure { max-width: 33.3%; }
+
+#pullup .gallery.col2 > img, #pullup .gallery.col3 > img { object-fit: cover; }
 
 /* Queries -------------------------------------------------------------------*/
 
