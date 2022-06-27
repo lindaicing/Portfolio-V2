@@ -175,6 +175,14 @@ a:hover {
   background: #555;
 }
 
+.showOnMobile { display: none; }
+.hideOnMobile { display: block; }
+
+@media (max-width: 768px){
+  .showOnMobile { display: block !important; }
+  .hideOnMobile { display: none !important; }
+}
+
 /* Images -------------------------------------------------------------------*/
 
 /* #logo{ width: auto; height: 3rem; } */

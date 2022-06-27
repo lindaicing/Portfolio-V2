@@ -110,6 +110,19 @@
     display: flex;
 }
 
+#pullup .column { display: flex; }
+
+#pullup .column > * { 
+    flex: 1; 
+    margin-right: 2rem;
+}
+
+@media (max-width: 600px){
+    #pullup .column { flex-direction: column; }
+    #pullup .column * { margin-right: 0; }
+}
+
+
 /* About -------------------------------------------------------------------*/
 
 #pullup #profilePhoto {
@@ -212,10 +225,6 @@
     padding: 2px;
 }
 
-#pullup img {
-
-}
-
 #pullup figure {
     max-width: 100%;
     margin-bottom: 2.5rem;
@@ -230,6 +239,89 @@
     font-style: italic;
     text-align: center;
     margin: 0 1rem;
+}
+
+#pullup .click-zoom { flex: 1; }
+
+#pullup .click-zoom input[type=checkbox] {
+    display: none;
+    z-index: 1;
+}
+  
+#pullup .click-zoom img { cursor: zoom-in; }
+  
+#pullup .click-zoom input[type=checkbox]:checked~img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0.5rem solid #222;
+    border-top: 6.5rem solid #222;
+    background: var(--BGColor);
+    z-index: 2;
+    object-fit: contain;
+    cursor: zoom-out;
+    background: #222;
+}
+
+#pullup .websitescroll_container {
+    margin: 4rem 0;
+}
+
+#pullup .websitescroll { position: relative; }
+
+#pullup .websitescroll figure {
+    max-height: 25rem;
+    overflow-y: scroll;
+}
+
+#pullup .websitescroll figcaption {
+    position: absolute;
+    left: -1rem;
+    bottom: -0.5rem;
+    width: 100%;
+}
+
+@media (max-width: 768px){
+    #pullup .websitescroll_container { margin-top: 0; }
+    #pullup .websitescroll { margin-top: 5rem; }
+}
+
+#pullup .click-zoom.websitescroll:hover::before,
+#pullup .click-zoom.websitescroll:hover::after {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+#pullup .click-zoom.websitescroll::before {
+    content: "Scroll me!";
+    display: block;
+    position: absolute;
+    top: -3rem;
+    left: calc(50% - 3rem);
+    width: 5rem;
+    padding: 0.5rem;
+    text-align: center;
+    background: #000;
+    color: #eee;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease-out;
+}
+
+#pullup .click-zoom.websitescroll:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -1rem;
+    left: calc(50% - 0.65rem);
+    border-right: 0.65rem solid transparent;
+    border-top: 1rem solid #000;
+    border-bottom: 1rem solid transparent;
+    border-left: 0.65rem solid transparent;
+    bottom: 0.65rem;
+    transition: all 0.3s ease-out;
 }
 
 #pullup .videoContainer {
@@ -248,31 +340,18 @@
     height: 100%;
 }
 
-#pullup iframe {
-    margin-bottom: 2rem;
-}
+#pullup iframe { margin-bottom: 2rem; }
 
-#pullup .figma {
-    width: 100%;
-}
+#pullup .figma { width: 100%; }
 
-@media (max-width: 600px){
-    #pullup .figma {
-        display: none;
-    }
+@media (max-width: 768px){
+    #pullup .figma { display: none; }
     #pullup .buttonFigma { display: inline-block; }
 }
-
-/* Gallery Grid */
-#pullup .gallery.col2 > img, #pullup .gallery.col2 > figure { max-width: 50%; }    
-#pullup .gallery.col3 > img, #pullup .gallery.col3 > figure { max-width: 33.3%; }
-
-#pullup .gallery.col2 > img, #pullup .gallery.col3 > img { object-fit: cover; }
 
 /* Queries -------------------------------------------------------------------*/
 
 @media (max-width: 600px){
     #pullup { padding: 3.5rem 2.2rem 2rem 2.2rem; }
     #pullup .gallery { flex-direction: column; }
-    #pullup .gallery.col2 > img, #pullup .gallery.col3 > img { max-width: 100%; }
 }
