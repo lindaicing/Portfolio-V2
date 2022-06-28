@@ -1,0 +1,42 @@
+.aboutSection p {
+    max-width: 35rem;
+    margin: auto;
+}
+
+/* Right Leaf */
+.aboutSection::before { 
+    content:'';
+    display: block;
+    position: fixed;
+    top: 16.5rem;
+    right: -19rem;
+    width: 35rem;
+    height: 40rem;
+    transform: rotate(25deg);
+    background: url("../images/about/leaf.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+/* Left Leaf */
+.aboutSection::after {
+    content:'';
+    display: block;
+    position: fixed;
+    top: 6rem;
+    left: -13rem;
+    width: 30rem;
+    height: 35rem;
+    transform: scaleX(-1) rotate(10deg);
+    background: url("../images/about/leaf.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+@media (max-width: 760px){
+    .aboutSection::after {
+      display: none;
+    }
+}
