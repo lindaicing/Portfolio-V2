@@ -40,6 +40,22 @@ nav {
   z-index: 100;
 }
 
+nav::before, /* Cover nav margins */
+nav::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: #222;
+    width: calc((100vw - 1196px)/2);
+    height: 6rem;
+    top: 0;
+    right: 100%;
+}
+nav::after {
+    right: auto;
+    left: 100%;
+}
+
 nav a, nav ul li {
  text-transform: uppercase;
  margin: 0.5rem 0.5rem 0.5rem 0;

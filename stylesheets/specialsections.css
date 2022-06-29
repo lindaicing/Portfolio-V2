@@ -1,46 +1,69 @@
-/* .aboutSection p {
+#pullup.about #pullupContent p {
     max-width: 35rem;
-    margin: auto;
+    margin: 0 auto 2rem auto;
 }
 
-.aboutSection::before,
-.aboutSection::after {
-    transition: all 0.3s ease-in;
+#pullup #leaves::before,
+#pullup #leaves::after {
     content:'';
     display: block;
     position: fixed;
     background: url("../images/about/leaf.svg");
     background-repeat: no-repeat;
-    z-index: -1;
     opacity: 0;
-} */
-
-/* Right Leaf */
-/* .aboutSection::before { 
-    top: 16.5rem;
-    right: -19rem;
-    width: 35rem;
-    height: 40rem;
-    transform: rotate(25deg);
-} */
-
-/* Left Leaf */
-/* .aboutSection::after {
-    top: 6rem;
-    left: -13rem;
-    width: 30rem;
-    height: 35rem;
-    transform: scaleX(-1) rotate(10deg);
+    z-index: -1;   
 }
 
-#pullup.show .aboutSection::before,
-#pullup.show .aboutSection::after {
+#pullup #leaves {
+    transition: 0;
+    opacity: 0;
+}
+
+#pullup.about #leaves {
+    opacity: 1;
+    transition: all 1s cubic-bezier(0.5, 0, 0.5, 1);
+    transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+/* Right Leaf */
+#pullup #leaves::before { 
+    top: 16rem;
+    right: -40rem;
+    width: 40rem;
+    height: 40rem;
+    transform: scale(1) rotate(10deg);
+}
+
+/* Left Leaf */
+#pullup #leaves::after {
+    top: 7.5rem;
+    left: -30rem;
+    width: 30rem;
+    height: 35rem;
+    transform: scale(1) scaleX(-1) rotate(0deg);
+}
+
+#pullup.about #leaves::before,
+#pullup.about #leaves::after {
+    transition: all 3.5s cubic-bezier(0.5, 0, 0.5, 1);
+    transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
     opacity: 0.2;
 }
 
-@media (max-width: 760px){
-    #pullup.show .aboutSection::after {
-      opacity: 0;
-    }
+/* Right Leaf */
+#pullup.about #leaves::before { 
+    right: -22rem;
+    transform: scale(1.2) rotate(25deg);
 }
- */
+
+/* Left Leaf */
+#pullup.about #leaves::after { 
+    left: -11rem;
+    transform: scale(1.2) scaleX(-1) rotate(20deg);
+}
+
+@media (max-width: 760px){
+    #pullup.about #leaves::after { opacity: 0; }
+}
+
+

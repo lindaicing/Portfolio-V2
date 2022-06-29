@@ -73,7 +73,7 @@ $(document).ready(function(){
         });
         $("#pullupContent .hero h1").html("About Linda"); /* Project Name Setup */
         $("#pullupContent .hero p").html("");
-        setPullup(); /* Project Content Setup */
+        setPullup("about"); /* Project Content Setup */
     });
 
     $("#art").click(function() {
@@ -89,15 +89,17 @@ $(document).ready(function(){
         setPullup(); /* Project Content Setup */
     });
 
-    function setPullup() {
+    function setPullup(about) {
         $("#pullupContent").addClass("show");
-        $("#pullup").addClass("show"); 
+        $("#pullup").addClass("show").removeClass("about"); 
+        if(about) { $("#pullup").addClass("about") }
     }
 
     $("#pullupToggle").click(function() { hidePullup() });
     $("#design").click(function() { hidePullup() });
     $("#logo").click(function() { hidePullup() });
+
     function hidePullup(){
-        $("#pullup").removeClass("show");
+        $("#pullup").removeClass("show").removeClass("about");
     }
 })
