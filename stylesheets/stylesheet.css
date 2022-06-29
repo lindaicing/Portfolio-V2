@@ -4,14 +4,13 @@
 @import "./specialsections.css";
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;700&display=swap');
 
-html {
-  scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+:root {
+  --maxWidth: 1196px;
+  --spotColor: #99c884;
 }
 
-::-webkit-scrollbar { 
-  display: none;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -33,7 +32,7 @@ nav, .footer {
   display: flex;
   flex-direction: row;
   height: 6rem;
-  max-width: 1196px;
+  max-width: var(--maxWidth);
   width: 100%;
   padding: 2rem 0;
   justify-content: space-between;

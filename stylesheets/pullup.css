@@ -1,8 +1,3 @@
-:root {
-    --maxWidth: 1196px;
-    --spotColor: #99c884;
-}
-
 #pullup {
     display: block;
     position: fixed;
