@@ -209,7 +209,8 @@
 }
 
 @media (max-width: 768px){
-    #pullup span.aboutSection { margin-top: 3rem; }
+    #pullup span.aboutSection { margin-top: -2rem; }
+    #pullup span.aboutSection h2:first-of-type { border-top: none; }
 }
 
 /* Footer -------------------------------------------------------------------*/
