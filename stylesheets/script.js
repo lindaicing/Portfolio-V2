@@ -102,6 +102,7 @@ $(document).ready(function(){
 
     function hidePullup(){
         $("#pullup").removeClass("show").removeClass("about");
+        $("#pullup").animate({ scrollTop: 0 }, 100);
         $(".mobileMenu").removeClass("expanded");
     }
 })
